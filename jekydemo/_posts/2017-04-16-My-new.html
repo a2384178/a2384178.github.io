@@ -7,157 +7,157 @@ title: 2017.4(canvas,以及获取宽高)
 
 <p>我的第2篇文章</p>
 <p>1.CSS3选择器:nth-child().
-    example:p:nth-child(2){color:red;}隶属于父元素的第二个子元素的p变为红色，并不是第二个p元素变为红色。
-    2.CSS3动画一共有三种，transition,transform,animation.其中transform有四个函数，拉伸skew，压缩scale，旋转rotate，偏移translate.
-    3.canvas绘图：
-    step1:获取canvas标签；
-    step2：得到canvas的绘制环境。var context=canvas.getContext('2d')
-    step3:欲绘制(100,100)到(700，700)的直线，但没有绘制（这是状态设置），必须执行context.stroke()后才绘制
-    context.moveTo(100,100);
-    context.lineTo(700，700);
+    example:p:nth-child(2){color:red;}隶属于父元素的第二个子元素的p变为红色，并不是第二个p元素变为红色。</p>
+<p>  2.CSS3动画一共有三种，transition,transform,animation.其中transform有四个函数，拉伸skew，压缩scale，旋转rotate，偏移translate.</p>
+    3.canvas绘图：<br>
+    step1:获取canvas标签；<br>
+    step2：得到canvas的绘制环境。var context=canvas.getContext('2d')<br>
+    step3:欲绘制(100,100)到(700，700)的直线，但没有绘制（这是状态设置），必须执行context.stroke()后才绘制<br>
+    context.moveTo(100,100);<br>
+    context.lineTo(700，700);<br>
 
-    网页可见区域宽：document.body.clientWidth
-    网页可见区域高：document.body.clientHeight
-    网页可见区域宽：document.body.offsetWidth (包括边线的宽)
-    网页可见区域高：document.body.offsetHeight (包括边线的宽)
-    网页正文全文宽：document.body.scrollWidth
-    网页正文全文高：document.body.scrollHeight
-    网页被卷去的高：document.body.scrollTop
-    网页被卷去的左：document.body.scrollLeft
-    网页正文部分上：window.screenTop
-    网页正文部分左：window.screenLeft
-    屏幕分辨率的高：window.screen.height
-    屏幕分辨率的宽：window.screen.width
-    屏幕可用工作区高度：window.screen.availHeight
-    屏幕可用工作区宽度：window.screen.availWidth
+   <p> 网页可见区域宽：document.body.clientWidth<br>
+    网页可见区域高：document.body.clientHeight<br>
+    网页可见区域宽：document.body.offsetWidth (包括边线的宽)<br>
+    网页可见区域高：document.body.offsetHeight (包括边线的宽)<br>
+    网页正文全文宽：document.body.scrollWidth<br>
+    网页正文全文高：document.body.scrollHeight<br>
+    网页被卷去的高：document.body.scrollTop<br>
+    网页被卷去的左：document.body.scrollLeft<br>
+    网页正文部分上：window.screenTop<br>
+    网页正文部分左：window.screenLeft<br>
+    屏幕分辨率的高：window.screen.height<br>
+    屏幕分辨率的宽：window.screen.width<br>
+    屏幕可用工作区高度：window.screen.availHeight<br>
+    屏幕可用工作区宽度：window.screen.availWidth<br><p>
 
-    HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth
-    scrollHeight: 获取对象的滚动高度。
-    scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离
-    scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离
-    scrollWidth:获取对象的滚动宽度
-    offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度
-    offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置
-    offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置
-    event.clientX 相对文档的水平座标
-    event.clientY 相对文档的垂直座标
-    event.offsetX 相对容器的水平坐标
-    event.offsetY 相对容器的垂直坐标
-    document.documentElement.scrollTop 垂直方向滚动的值
-    event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量
+   <p> HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth<br>
+    scrollHeight: 获取对象的滚动高度。<br>
+    scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br>
+    scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br>
+    scrollWidth:获取对象的滚动宽度<br>
+    offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br>
+    offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br>
+    offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br>
+    event.clientX 相对文档的水平座标<br>
+    event.clientY 相对文档的垂直座标<br>
+    event.offsetX 相对容器的水平坐标<br>
+    event.offsetY 相对容器的垂直坐标<br>
+    document.documentElement.scrollTop 垂直方向滚动的值<br>
+    event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量</p>
 
 
-    IE，FireFox 差异如下：
+    IE，FireFox 差异如下：<br>
 
-    IE6.0、FF1.06+：
+    IE6.0、FF1.06+：<br>
 
-    clientWidth = width + padding
+    clientWidth = width + padding<br>
 
-    clientHeight = height + padding
+    clientHeight = height + padding<br>
 
-    offsetWidth = width + padding + border
+    offsetWidth = width + padding + border<br>
 
-    offsetHeight = height + padding + border
+    offsetHeight = height + padding + border<br>
 
-    IE5.0/5.5：
-    clientWidth = width - border
+    IE5.0/5.5：<br>
+    clientWidth = width - border<br>
 
-    clientHeight = height - border
+    clientHeight = height - border<br>
 
-    offsetWidth = width
+    offsetWidth = width<br>
 
-    offsetHeight = height
+    offsetHeight = height<br>
 
-    (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)
+    (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br>
 
-    网页可见区域宽： document.body.clientWidth
-    网页可见区域高： document.body.clientHeight
-    网页可见区域宽： document.body.offsetWidth (包括边线的宽)
-    网页可见区域高： document.body.offsetHeight (包括边线的高)
-    网页正文全文宽： document.body.scrollWidth
-    网页正文全文高： document.body.scrollHeight
-    网页被卷去的高： document.body.scrollTop
-    网页被卷去的左： document.body.scrollLeft
-    网页正文部分上： window.screenTop
-    网页正文部分左： window.screenLeft
-    屏幕分辨率的高： window.screen.height
-    屏幕分辨率的宽： window.screen.width
-    屏幕可用工作区高度： window.screen.availHeight
-    屏幕可用工作区宽度： window.screen.availWidth
+    网页可见区域宽： document.body.clientWidth<br>
+    网页可见区域高： document.body.clientHeight<br>
+    网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br>
+    网页可见区域高： document.body.offsetHeight (包括边线的高)<br>
+    网页正文全文宽： document.body.scrollWidth<br>
+    网页正文全文高： document.body.scrollHeight<br>
+    网页被卷去的高： document.body.scrollTop<br>
+    网页被卷去的左： document.body.scrollLeft<br>
+    网页正文部分上： window.screenTop<br>
+    网页正文部分左： window.screenLeft<br>
+    屏幕分辨率的高： window.screen.height<br>
+    屏幕分辨率的宽： window.screen.width<br>
+    屏幕可用工作区高度： window.screen.availHeight<br>
+    屏幕可用工作区宽度： window.screen.availWidth<br>
 
     －－－－－－－－－－－－－－－－－－－
 
-    技术要点
-    本节代码主要使用了Document对象关于窗口的一些属性，这些属性的主要功能和用法如下。
+    技术要点<br>
+    本节代码主要使用了Document对象关于窗口的一些属性，这些属性的主要功能和用法如下。<br>
 
-    要得到窗口的尺寸，对于不同的浏览器，需要使用不同的属性和方法：若要检测窗口的真实尺寸，在Netscape下需要使用Window的属性；在 IE下需要深入Document内部对body进行检测；在DOM环境下，若要得到窗口的尺寸，需要注意根元素的尺寸，而不是元素。
+    要得到窗口的尺寸，对于不同的浏览器，需要使用不同的属性和方法：若要检测窗口的真实尺寸，在Netscape下需要使用Window的属性；在 IE下需要深入Document内部对body进行检测；在DOM环境下，若要得到窗口的尺寸，需要注意根元素的尺寸，而不是元素。<br>
 
-    Window对象的innerWidth属性包含当前窗口的内部宽度。Window对象的innerHeight属性包含当前窗口的内部高度。
+    Window对象的innerWidth属性包含当前窗口的内部宽度。Window对象的innerHeight属性包含当前窗口的内部高度。<br>
 
-    Document对象的body属性对应HTML文档的标签。Document对象的documentElement属性则表示HTML文档的根节点。
+    Document对象的body属性对应HTML文档的标签。Document对象的documentElement属性则表示HTML文档的根节点。<br>
 
-    document.body.clientHeight表示HTML文档所在窗口的当前高度。document.body. clientWidth表示HTML文档所在窗口的当前宽度。
+    document.body.clientHeight表示HTML文档所在窗口的当前高度。document.body. clientWidth表示HTML文档所在窗口的当前宽度。<br>
 
+<p>
+    关于获取各种浏览器可见窗口大小的一点点研究。<br>
 
-    关于获取各种浏览器可见窗口大小的一点点研究。
+    在我本地测试当中：在IE、FireFox、Opera下都可以使用<br>
 
-    在我本地测试当中：在IE、FireFox、Opera下都可以使用
+    document.body.clientWidth<br>
 
-    document.body.clientWidth
+    document.body.clientHeight即可获得，很简单，很方便。<br>
 
-    document.body.clientHeight即可获得，很简单，很方便。
+    而在公司项目当中：Opera仍然使用<br>
 
-    而在公司项目当中：Opera仍然使用
+    document.body.clientWidth<br>
 
-    document.body.clientWidth
+    document.body.clientHeight<br>
 
-    document.body.clientHeight
+    可是IE和FireFox则使用<br>
 
-    可是IE和FireFox则使用
+    document.documentElement.clientWidth<br>
 
-    document.documentElement.clientWidth
+    document.documentElement.clientHeight<br>
 
-    document.documentElement.clientHeight
+    原来是W3C的标准在作怪啊http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><br>
 
-    原来是W3C的标准在作怪啊http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    如果在页面中添加这行标记的话<br>
 
-    如果在页面中添加这行标记的话
+    在IE中：document.body.clientWidth ==> BODY对象宽度<br>
 
-    在IE中：document.body.clientWidth ==> BODY对象宽度
+    document.body.clientHeight ==> BODY对象高度<br>
 
-    document.body.clientHeight ==> BODY对象高度
+    document.documentElement.clientWidth ==> 可见区域宽度<br>
 
-    document.documentElement.clientWidth ==> 可见区域宽度
+    document.documentElement.clientHeight ==> 可见区域高度<br>
 
-    document.documentElement.clientHeight ==> 可见区域高度
+    在FireFox中：document.body.clientWidth ==> BODY对象宽度<br>
 
-    在FireFox中：document.body.clientWidth ==> BODY对象宽度
+    document.body.clientHeight ==> BODY对象高度<br>
 
-    document.body.clientHeight ==> BODY对象高度
+    document.documentElement.clientWidth ==> 可见区域宽度<br>
 
-    document.documentElement.clientWidth ==> 可见区域宽度
+    document.documentElement.clientHeight ==> 可见区域高度?<br>
 
-    document.documentElement.clientHeight ==> 可见区域高度?
+    在Opera中： document.body.clientWidth ==> 可见区域宽度<br>
 
-    在Opera中： document.body.clientWidth ==> 可见区域宽度
-
-    document.body.clientHeight ==> 可见区域高度
+    document.body.clientHeight ==> 可见区域高度<br>
 
     document.documentElement.clientWidth ==> 页面对象宽度（即BODY对象宽度加上Margin宽）document.documentElement.clientHeight ==> 页面对象高度（即BODY对象高度加上Margin高）
 
-    而如果没有定义W3C的标准，
+    而如果没有定义W3C的标准，<br>
 
-    则IE为：document.documentElement.clientWidth ==> 0
+    则IE为：document.documentElement.clientWidth ==> 0<br>
 
-    document.documentElement.clientHeight ==> 0
+    document.documentElement.clientHeight ==> 0<br>
 
-    FireFox为:document.documentElement.clientWidth ==> 页面对象宽度（即BODY对象宽度加上Margin宽）
+    FireFox为:document.documentElement.clientWidth ==> 页面对象宽度（即BODY对象宽度加上Margin宽）<br>
 
-    document.documentElement.clientHeight ==> 页面对象高度（即BODY对象高度加上Margin高）
+    document.documentElement.clientHeight ==> 页面对象高度（即BODY对象高度加上Margin高）<br>
 
-    Opera为：document.documentElement.clientWidth ==> 页面对象宽度（即BODY对象宽度加上Margin宽）
+    Opera为：document.documentElement.clientWidth ==> 页面对象宽度（即BODY对象宽度加上Margin宽）<br>
 
-    document.documentElement.clientHeight ==> 页面对象高度（即BODY对象高度加上Margin高）
+    document.documentElement.clientHeight ==> 页面对象高度（即BODY对象高度加上Margin高）<br>
 
 </p>
 
