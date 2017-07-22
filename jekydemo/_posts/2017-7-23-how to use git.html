@@ -1,24 +1,51 @@
 ---
 layout: default
-title: 2017.4.23(viewport,等手机端初步设置)
+title: 2017.7.23(github使用基础)
 ---
 
 <h2>{{ page.title }}</h2>
 
 <p>我的第3篇文章</p>
-<p>1."meta name='viewport' conntent='width=device-width，user-scalable=no'"</p>
+<p>1.新建：$ mkdir pracitcegit</br>
+        $ cd practicegit</br>
+		$ pwd//显示路径</br>
+		</p>
+		
+<p>2.初始化：$ git init//变成仓库</p>
 
-<p>2.viewport（width两个参数：device-width||number）可视区窗口，一般可视区宽度在移动端是980。<br>
-number在安卓有兼容问题，所以一般使用device-width。<br>
-user-scalable=no:禁止用户缩放 （iOS10无效）<br>
-initial-scale：初始比例。</p>
+<p>3.添加到仓库：$ git add gitpractice.txt</p>
+<p>4.提交到仓库：$ git commit -m "first submit"</p>
 
-<p>3.移动端适配。百分比布局：宽度百分比，高度写固定值（一般只是配合其他使用，因为适配性较低）
-viewport适配；rem适配：根节点的字体大小。
-</p>
+<p>5.$ git status //查看状态</p>
+<p>6.$ git diff//查看和上修改的不同</p>
+<p>7.$ git log //查看历史记录</p>
+<p>8.$ git reset --hard HEAD^//回退到上一个版本，</p> 
+<p>9.$ git reset --hard 36525656//回退到数字指定的版本。数字为commit的ID，可以不用写全</p>
+<p>10.$ git reflog//会记录每一次的命令</p>
+<p>11.$ git checkout -- file //丢弃工作区的修改。让这个文件回到最近一次git commit或git add时的状态。</p>
+<p>12.$ git rm file//删除文件，之后记得commit</p>
+<p>13.如果删错了，还可以$ git checkout用版本库的替换工作区的</p>
+克隆：
+<p>14.$ git clone git@github.com:a2384178/gitskills.git//要把仓库换成自己的名字</p>
 
-<p>4.使用RGBA可以使得父元素的opacity不影响里面的文字。</p>
+<p>分支管理：</p>
+<p>15.$ git checkout -b dev//-b表示创建分支dev并且切换到dev上</p>
+<p>16.$ git branch 查看当前分支，*表示当前的</p>
+<p>对dev分支修改commit后切回master</p>
+<p>17.$ git checkout master</p>
+<p>18.$ git merge dev//把dev上面的工作成果合并到master上面。</p>
 
+<p>小结：查看分支：git branch</p>
 
-<p>{{ page.date | date_to_string }}</p>
+<p>创建分支：git branch <name> </p>
+
+<p>切换分支：git checkout <name></p>
+
+<p>创建+切换分支：git checkout -b <name></p>
+
+<p>合并某分支到当前分支：git merge <name></p>
+
+<p>删除分支：git branch -d <name></p>
+
+<p>{{ page.date | date_to_string }}</p></p>
 
