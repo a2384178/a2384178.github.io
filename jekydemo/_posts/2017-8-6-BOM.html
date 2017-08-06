@@ -1,0 +1,53 @@
+---
+layout: default
+title: 2017.8.6(BOM相关基础)
+---
+
+<h2>{{ page.title }}</h2>
+
+<p>window</p>
+<p>表示浏览器的窗口。</p>
+<p>有innerWidth和innerHeight这两个属性。可以获取浏览器的内部宽高。</p>
+
+<p>	window.innerWidth;</p>
+<p>	window.innerHeight;</p>
+
+<p>对应的还有outWidth和outHeight这两个属性，获取浏览器窗口的整体的宽高。</p>
+<p>	window.outWidth;</p>
+<p>	window.outHeight;</p>
+
+
+<p>2.navigator
+表示浏览器信息。<br>
+navigator.appName:浏览器名称；<br>
+navigator.appVersion:浏览器版本<br>
+navigator.language:浏览器设置的语言<br>
+navigator.platform：操作系统类型；<br>
+navigator.userAgent:浏览器设定的Use-Agent字符串<br>
+</p>
+<p>
+3.screen
+表示屏幕信息。<br>
+screen.width; //屏幕宽度<br>
+screen.height;  //屏幕宽度<br>
+screen.colorDepth;  //颜色位数<br>
+</p>
+<p>
+4.location
+表示当前页面的URL信息。<br>
+location.href;  //获取当前页面URL整体信息<br>
+</p>
+<p>
+5.document
+表示当前的页面信息。<br>
+还可以获取当前页面的Cookie信息。<br>
+document.cookie;<br>
+</p>
+<p>
+6.history
+表示页面的历史纪录。<br>
+但在任何情况下不使用该对象。<br>
+</p>
+
+<p>{{ page.date | date_to_string }}</p>
+
